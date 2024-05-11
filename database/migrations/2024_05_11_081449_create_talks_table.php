@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('talks', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('id_user')->constrained('users');
+            $table->foreignId('user_id')->constrained('users');
             $table->text('talk');
             $table->timestamps();
         });

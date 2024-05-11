@@ -11,17 +11,17 @@ class Komentar extends Model
 
     protected $table = 'komentars';
     protected $fillable = [
-        'id_talk',
-        'id_user',
+        'talk_id',
+        'user_id',
         'komentar',
     ];
     public function talk()
     {
-        return $this->belongsTo(Talk::class, 'id_talk');
+        return $this->belongsTo(Talk::class, 'talk_id');
     }
 
     public function user()
     {
-        return $this->belongsTo(User::class, 'id_user');
+        return $this->belongsTo(User::class, 'user_id');
     }
 }
